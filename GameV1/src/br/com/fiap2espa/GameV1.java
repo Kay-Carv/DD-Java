@@ -35,5 +35,22 @@ public class GameV1 {
             //tentativas -= tentativas;
             //tentativas = tentativas - 1;
         }
+        // 8 tipos de arquivos primitivos
+
+        int inteiro = 1 + 2 / 3;
+        //System.out.println(inteiro);
+        byte bytes; //8 bits
+        short curto;//32 bit
+        long longo; //64 bit
+
+        boolean boliano; //2 bit   0 ou 1 true or false
+
+        float decimais;
+        double decimalMenor;
+
+        char caracteres;
+
+        // Operadores relacionados < <= > >= == !=
+        // Operadores lógicos || && !
     }
 }
