@@ -35,6 +35,9 @@ public class GameV1 {
             //tentativas -= tentativas;
             //tentativas = tentativas - 1;
         }
+        leitor.close(); //encerrando o recurso
+
+
         // 8 tipos de arquivos primitivos
 
         int inteiro = 1 + 2 / 3;
@@ -52,5 +55,6 @@ public class GameV1 {
 
         // Operadores relacionados < <= > >= == !=
         // Operadores lógicos || && !
-    }
-}
+
+    }//--> FIM DO MÉTODO MAIN
+}//Fim da classe
