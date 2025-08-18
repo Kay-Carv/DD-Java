@@ -1,5 +1,5 @@
 ### IntelliJ IDEA ###
-out/
+../GameV1/out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
