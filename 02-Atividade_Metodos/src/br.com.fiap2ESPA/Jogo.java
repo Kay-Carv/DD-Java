@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Jogo {//Classe de Objeto
     //Propriedades ou Atributos:
     int númeroSorteado;
-    int tentativas;
+    static int tentativas; //transformando a variável em stático
     String jogador;
 
     //Construtores:
@@ -39,7 +39,7 @@ public class Jogo {//Classe de Objeto
         return nome;
     }
 
-    void apresentarDesafio() {
+    static void apresentarDesafio() {
         System.out.println("Você é capaz de descobrir o número sorteado?");
         System.out.println("Você terá " + tentativas + " tentativas");
     }
@@ -59,7 +59,7 @@ public class Jogo {//Classe de Objeto
         }
     }
 
-    void finalizarJogo() {
+    static void finalizarJogo() {
         System.out.println("Fim do Jogo!");
     }
 }
