@@ -4,29 +4,32 @@ package br.com.fiap2espa;
 
 import java.util.Scanner;
 
-public class GameV3 { //Classe de drive
+public class GameV3 {
     public static void main(String[] args) {
+        //Configuração do jogo:
         Scanner leitor = new Scanner(System.in);
 
+        //Instanciando classe especial: Random
+        // Random rd = Math.random();
 
-        Jogo jogo1 = new Jogo(59, 3); //Estanciando novo objeto na tela
+        int númeroSorteado = (int) (Math.random() * 100 + 1);
 
-        //jogo1.chamarDesafiador(leitor);
+        Jogo jogo1 = new Jogo(númeroSorteado, 3);
+
+        // Chamando o desafiador
+        System.out.println("Desafiador, digite a sua senha");
+        int senha = leitor.nextInt();
+        jogo1.chamarDesafiador(leitor, senha);
+
+        Jogo.setPassword(1234, 4321);
 
         //Execução do jogo:
-        jogo1.apresentarSaudação();
-        jogo1.jogador = jogo1.coletarNome(leitor);
-        jogo1.apresentarDesafio();
-        jogo1.jogar(leitor, jogo1.jogador);
+        Jogo.apresentarSaudação();
+        Jogo.apresentarDesafio();
+        jogo1.setJogador(jogo1.coletarNome(leitor)); //Passando argumento para o método set, afim de buscar uma varável privada
+        jogo1.jogar(leitor);
         jogo1.finalizarJogo();
-
-//        Jogo jogo2 = new Jogo(45, 2);
-//        apresentarDesafio(jogo2.tentativas);
-//        jogar(leitor, nome, jogo1.tentativas, jogo2.numeroSorteado);
-//        finalizarJoog();
 
         leitor.close();
     }//Fim do método main
-
-
 }//Fim da classe
