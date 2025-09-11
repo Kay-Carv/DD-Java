@@ -19,6 +19,26 @@ public abstract class Animal {
         this.mediumMass = mediumMass;
     }
 
+    //Behaviors
+    public void born(){
+        System.out.println("Animal nascendo");
+    }
+
+    public void eat(){
+        System.out.println("Animal comendo");
+    }
+
+    public void grow(){
+        System.out.println("Animal crescendo!");
+    }
+
+    public void repoduce() {
+        System.out.println("Animal reproduzindo");
+    }
+
+    public void die() {
+        System.out.println("Animal morrendo D:");
+    }
 
     //Atalho (alt + insert) generate -> Getter e Setter
     public String getSciName() {

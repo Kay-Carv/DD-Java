@@ -30,18 +30,26 @@ public class AnimalTester {
         System.out.println(shark1);
         System.out.println(shark2);
 
-        //Para testes
-        Shark shark = new Shark();
-        System.out.println(shark);
+//        //Para testes
+//        Shark shark = new Shark();
+//        System.out.println(shark);
+//
+//        shark.setMediumMass(170);
+//        shark.setNumOfFins(3);
+//        System.out.println(shark);
+//
+//        shark.setPopName("Tubarão top");
+//        System.out.println(shark);
+//
+//        Whale whale = new Whale("Baleia Azul", "Baleia Azul",120, 2000, 320);
+//        System.out.println(whale);
 
-        shark.setMediumMass(170);
-        shark.setNumOfFins(3);
-        System.out.println(shark);
-
-        shark.setPopName("Tubarão top");
-        System.out.println(shark);
-
-        Whale whale = new Whale("Baleia Azul", "Baleia Azul",120, 2000, 320);
-        System.out.println(whale);
+        //POLIMORFISMO
+        //Invocar o método virtual (Obs: Sempre invoca o método DA CLASSE MAIS ESPECÍFICA) === POLIMORFISMO
+        shark1.born();
+        shark1.eat();
+        shark1.grow();
+        shark1.repoduce();
+        shark1.die();
     }
 }

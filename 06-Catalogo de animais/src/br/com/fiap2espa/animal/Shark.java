@@ -16,6 +16,32 @@ public class Shark extends Fish{
     }
 
     //Behaviors
+    //POLIMORFISMO == Específicando método
+    @Override
+    public void born(){
+        System.out.println("\nTubarão nascendo!");
+    }
+
+    @Override
+    public void eat(){
+        System.out.println("Tubarão comendo!");
+    }
+
+    @Override
+    public void grow(){
+        System.out.println("Tubarão crescendo!");
+    }
+
+    @Override
+    public void repoduce() {
+        System.out.println("Tubarão reproduzindo!");
+    }
+
+    @Override
+    public void die() {
+        System.out.println("Tubarão morrendo D:");
+    }
+
     public int getNumOfFins() {
         return numOfFins;
     }
