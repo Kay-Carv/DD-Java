@@ -41,5 +41,7 @@ public class AnimalTester {
         shark.setPopName("Tubarão top");
         System.out.println(shark);
 
+        Whale whale = new Whale("Baleia Azul", "Baleia Azul",120, 2000, 320);
+        System.out.println(whale);
     }
 }
