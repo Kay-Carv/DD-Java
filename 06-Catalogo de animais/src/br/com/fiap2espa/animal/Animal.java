@@ -7,6 +7,38 @@ public abstract class Animal {
     private int maxAge;
     private double mediumMass;
 
+    //Constructors
+    //public Animal() {} //Não tem propósito de instanciar na classe Drive LOGO NÃO É NECESSÁRIO (A classe abstrata não instanciara objetos e o construtor vazio não precisa ser chamado nas classes inferiores
+
+    public Animal() {} //Construtor padrão para testes (ter disponibilidade de construtores vazios nas classes abaixo
+
+    public Animal( String sciName, String popName, int maxAge, double mediumMass ) {
+        this.sciName = sciName;
+        this.popName = popName;
+        this.maxAge = maxAge;
+        this.mediumMass = mediumMass;
+    }
+
+    //Behaviors
+    public void born(){
+        System.out.println("Animal nascendo");
+    }
+
+    public void eat(){
+        System.out.println("Animal comendo");
+    }
+
+    public void grow(){
+        System.out.println("Animal crescendo!");
+    }
+
+    public void repoduce() {
+        System.out.println("Animal reproduzindo");
+    }
+
+    public void die() {
+        System.out.println("Animal morrendo D:");
+    }
 
     //Atalho (alt + insert) generate -> Getter e Setter
     public String getSciName() {
@@ -39,5 +71,13 @@ public abstract class Animal {
 
     public void setMediumMass(double mediumMass) {
         this.mediumMass = mediumMass;
+    }
+
+    @Override
+    public String toString() {
+        return "\nNúmero de nadadeiras: " + sciName +
+                "\nNome popular: " + popName +
+                "\nIdade máxima: " + maxAge +
+                "\nMassa/Peso médio: " + mediumMass;
     }
 }
