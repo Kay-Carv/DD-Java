@@ -25,4 +25,14 @@ public class Frog extends Amphibian{
     public void die() {
         System.out.println("Sapo morrendo D:");
     }
+
+    @Override
+    public void swin() {
+        System.out.println("Sapo nadando! ");
+    }
+
+    @Override
+    public void walk() {
+        System.out.println("Sapo pulando! ");
+    }
 }

@@ -1,6 +1,6 @@
 package br.com.fiap2espa.animal;
 
-public class Shark extends Fish{
+public class Shark extends Fish {
     //Propriedades
     private int numOfFins;
 
@@ -53,5 +53,10 @@ public class Shark extends Fish{
     @Override //Método padrão que substitui uma classe superior
     public String toString() {
         return super.toString() + "\número de nadadeiras: " + numOfFins;
+    }
+
+    @Override
+    public void swin() {
+        System.out.println("Tubarão nadando!");     //Implementando interface
     }
 }

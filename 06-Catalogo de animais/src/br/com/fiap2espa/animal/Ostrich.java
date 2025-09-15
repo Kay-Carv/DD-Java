@@ -1,6 +1,6 @@
 package br.com.fiap2espa.animal;
 
-public class Ostrich extends Bird {
+public class Ostrich extends Bird implements Terrestrial{
     @Override
     public void born() {
         System.out.println("Avestruz nascendo! ");
@@ -24,5 +24,10 @@ public class Ostrich extends Bird {
     @Override
     public void die() {
         System.out.println("Avestruz morrendo D: ");
+    }
+
+    @Override
+    public void walk() {
+        System.out.println("Avestruz andando! ");
     }
 }

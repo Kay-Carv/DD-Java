@@ -1,6 +1,6 @@
 package br.com.fiap2espa.animal;
 
-public class Whale extends Mammal {
+public class Whale extends Mammal implements Aquatic{
     //Properties
     private double length;
 
@@ -40,5 +40,10 @@ public class Whale extends Mammal {
     @Override
     public void die() {
         System.out.println("Baleia morrendo D: ");
+    }
+
+    @Override
+    public void swin() {
+        System.out.println("Baleia nadando! ");
     }
 }
