@@ -23,8 +23,8 @@ public class AnimalTester {
 
         //Abstração popular
         //Instanciar o objeto
-        Shark shark1 = new Shark("Galeio cerdo cuvier", "Tubarão Tigre", 100, 250.0, 5);
-        Shark shark2 = new Shark("Carcharodon carcharias", "Tubarão Branco", 80, 800.0, 5);
+        Shark shark1 = new Shark("Galeio cerdo cuvier", "Tubarão Tigre", 100, 250.0, 5, Color.GREY);
+        Shark shark2 = new Shark("Carcharodon carcharias", "Tubarão Branco", 80, 800.0, 5, Color.WHITE);
 
 
         System.out.println(shark1);

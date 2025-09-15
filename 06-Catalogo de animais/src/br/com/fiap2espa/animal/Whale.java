@@ -5,8 +5,8 @@ public class Whale extends Mammal implements Aquatic{
     private double length;
 
     //Constructors
-    public Whale(String sciName, String popName, int maxAge, double mediumMass, double length) {
-        super(sciName, popName, maxAge, mediumMass);
+    public Whale(String sciName, String popName, int maxAge, double mediumMass, double length, Color color) {
+        super(sciName, popName, maxAge, mediumMass, color);
         this.length = length;
     }
 

@@ -6,17 +6,19 @@ public abstract class Animal {
     private String popName;
     private int maxAge;
     private double mediumMass;
+    private Color color;
 
     //Constructors
     //public Animal() {} //Não tem propósito de instanciar na classe Drive LOGO NÃO É NECESSÁRIO (A classe abstrata não instanciara objetos e o construtor vazio não precisa ser chamado nas classes inferiores
 
     public Animal() {} //Construtor padrão para testes (ter disponibilidade de construtores vazios nas classes abaixo
 
-    public Animal( String sciName, String popName, int maxAge, double mediumMass ) {
+    public Animal( String sciName, String popName, int maxAge, double mediumMass, Color color ) {
         this.sciName = sciName;
         this.popName = popName;
         this.maxAge = maxAge;
         this.mediumMass = mediumMass;
+        this.color = color;
     }
 
     //Behaviors                           abstract = Declarado em uma super classe e depois declarar em outra
@@ -63,11 +65,16 @@ public abstract class Animal {
         this.mediumMass = mediumMass;
     }
 
+    public Color getColor() { return color;}
+
+    public void setColor(Color color) { this.color = color; }
+
     @Override
     public String toString() {
-        return "\nNúmero de nadadeiras: " + sciName +
+        return "\nNome cientifíco: " + sciName +
                 "\nNome popular: " + popName +
                 "\nIdade máxima: " + maxAge +
-                "\nMassa/Peso médio: " + mediumMass;
+                "\nMassa/Peso médio: " + mediumMass +
+                "\nCor: " + color;
     }
 }
