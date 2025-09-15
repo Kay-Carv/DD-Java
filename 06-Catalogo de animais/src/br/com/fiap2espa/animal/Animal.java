@@ -19,26 +19,16 @@ public abstract class Animal {
         this.mediumMass = mediumMass;
     }
 
-    //Behaviors
-    public void born(){
-        System.out.println("Animal nascendo");
-    }
+    //Behaviors                           abstract = Declarado em uma super classe e depois declarar em outra
+    public abstract void born();        //Deixe o método o mais específico possível. Uso de abstract
 
-    public void eat(){
-        System.out.println("Animal comendo");
-    }
+    public abstract void eat();
 
-    public void grow(){
-        System.out.println("Animal crescendo!");
-    }
+    public abstract void grow();
 
-    public void repoduce() {
-        System.out.println("Animal reproduzindo");
-    }
+    public abstract void repoduce();
 
-    public void die() {
-        System.out.println("Animal morrendo D:");
-    }
+    public abstract void die();
 
     //Atalho (alt + insert) generate -> Getter e Setter
     public String getSciName() {
