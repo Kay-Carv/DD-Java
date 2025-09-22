@@ -1,0 +1,11 @@
+## Complete o vocabulário abaixo
+
+= O ato de processar por meio de um array
+= Uma estrutura que armazena vários valores do mesmo tipo de dados
+= Um array bidimensional.
+= Um número inteiro que identifica o local de um valor em um array
+= A capacidade de passar dados para a função principal e acessá-los como um elemento de um array.
+= Um procedimento lógico de computação que, se aplicado corretamente, garante a solução de um problema
+= Um array de arrays, semelhante a uma tabela, matriz ou planilha.
+= Um loop positivo dentro de um loop positivo
+= Um objeto nomeado usado para armazenar mais de um valor.
