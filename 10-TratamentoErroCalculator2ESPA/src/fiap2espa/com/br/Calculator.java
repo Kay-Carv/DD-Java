@@ -2,6 +2,7 @@
 
 package fiap2espa.com.br;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Calculator {
@@ -14,34 +15,46 @@ public class Calculator {
 
         String response;
 
-        do {
-            System.out.println("Digite uma operação: ");
-            System.out.println(" (+) se soma \n (-) se subtração \n (*) se multiplicação \n (/) se divisão \n (%) se resto \n (^) se potência");
-            char operador = scanner.next().charAt(0);    //Se eu digitar uma string, pegue o primeiro o caracteres
+        try {
+            do {
+                System.out.println("Digite uma operação: ");
+                System.out.println(" (+) se soma \n (-) se subtração \n (*) se multiplicação \n (/) se divisão \n (%) se resto \n (^) se potência");
+                char operador = scanner.next().charAt(0);    //Se eu digitar uma string, pegue o primeiro o caracteres
 
-            System.out.println("Digite o primeiro número: ");
-            int num1 = scanner.nextInt();
-            System.out.println("Digite o segundo valor");
-            int num2 = scanner.nextInt();
+                System.out.println("Digite o primeiro número: ");
+                int num1 = scanner.nextInt();
+                System.out.println("Digite o segundo valor");
+                int num2 = scanner.nextInt();
 
-            int result;
-            switch (operador) {
-                case '+' -> System.out.println(result = (num1 + num2));
-                case '-' -> result = num1 - num2;
-                case '%' -> result = num1 % num2;
-                case '*' -> result = num1 * num2;
-                case '/' -> result = num1 / num2;
-                case '^' -> result = (int) Math.pow(num1, num2);
-                default -> {
-                    System.out.println("Operador inválido");
-                    result = 0;
+                int result;
+                switch (operador) {
+                    case '+' -> System.out.println(result = (num1 + num2));
+                    case '-' -> result = num1 - num2;
+                    case '%' -> result = num1 % num2;
+                    case '*' -> result = num1 * num2;
+                    case '/' -> result = num1 / num2;
+                    case '^' -> result = (int) Math.pow(num1, num2);
+                    default -> {
+                        System.out.println("Operador inválido");
+                        result = 0;
+                    }
                 }
-            }
-            System.out.printf("O resultado da operação (%d%s%d) é: %d%n", num1, operador, num2, result);
+                System.out.printf("O resultado da operação (%d%s%d) é: %d%n", num1, operador, num2, result);
 
-            System.out.println("\nDeseja realizar outra operação? (Digite sim ou não)");
-            response = scanner.next();
-        } while (response.equalsIgnoreCase("sim"));
+                System.out.println("\nDeseja realizar outra operação? (Digite sim ou não)");
+                response = scanner.next();
+            } while (response.equalsIgnoreCase("sim"));
+
+        //Realizando multi catch para tratamento de erro
+        } catch (ArithmeticException e) {
+            System.out.println("Não pode dividir por 0");
+        } catch (InputMismatchException e) {
+            System.out.println("Digite uma informação númerica");
+        }
+        catch (Exception e) {                            //capturando exceção
+            System.out.println("Alguma coisa deu ruim e não sei o que é, mas a superclasse abaixo printou o erro");
+            e.printStackTrace();
+        }
 
         System.out.println("===Programa finalizado===");
         scanner.close();
