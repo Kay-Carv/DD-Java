@@ -13,7 +13,7 @@ public class Calculator {
         System.out.println("=== Bem vindo ao sistema de calculadora===");
         System.out.println("\nEssa é uma calculadora de operadores simples com números inteiros");
 
-        String response;
+        String response = "SIM";
 
         try {
             do {
@@ -41,8 +41,17 @@ public class Calculator {
                 }
                 System.out.printf("O resultado da operação (%d%s%d) é: %d%n", num1, operador, num2, result);
 
-                System.out.println("\nDeseja realizar outra operação? (Digite sim ou não)");
-                response = scanner.next();
+                try {
+                    System.out.println("\nDeseja realizar outra operação? (Digite sim ou não)");
+                    response = scanner.next();
+                    if (!response.equalsIgnoreCase("sim") && !response.equalsIgnoreCase("nao")) {
+                        throw new RespostaInvalidaExcecao("Você precisa digitar \"Sim\" ou \"Não\"");
+                    }
+                } catch (RespostaInvalidaExcecao e) {
+                    e.printStackTrace();
+                    System.out.println(e.getMessage());
+                }
+
             } while (response.equalsIgnoreCase("sim"));
 
         //Realizando multi catch para tratamento de erro
