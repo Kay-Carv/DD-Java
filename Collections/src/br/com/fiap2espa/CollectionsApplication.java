@@ -5,7 +5,7 @@ package br.com.fiap2espa;
 
 import java.awt.*;
 import java.lang.reflect.Array;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
 
 public class CollectionsApplication {
@@ -61,6 +61,32 @@ public class CollectionsApplication {
 
         //--Interface SET   -- Equivalente a tuple do python
             //--HashSet<>
+        Set<String> terceiraLista = new HashSet<>();
+        terceiraLista.add("palavrão");
+        terceiraLista.add("noite");
+        terceiraLista.add("manhã");
+        terceiraLista.add("tarde");
+        terceiraLista.addAll(List.of("noite", "manhã", "tarde", "Canalha"));
+        System.out.println(terceiraLista.size());
+        System.out.println(terceiraLista);
+        //System.out.println(terceiraLista.get(0));   //Tupla(set) não consegue acessar o dado pois a gente perde a referência de ordenação
+
+        for (String print: terceiraLista) {
+            System.out.println(print);
+        }
+
+
+        //Utilização de TreeSet já vem ordenado
+        Set<String> quartaLista = new TreeSet<>();
+        quartaLista.add("palavrão");
+        quartaLista.add("noite");
+        quartaLista.add("manhã");
+        quartaLista.add("tarde");
+        quartaLista.addAll(List.of("noite", "manhã", "tarde", "Canalha"));
+        System.out.println(quartaLista.size());
+        System.out.println(quartaLista);
+
+
         //--Map<>             -- Equivalente a Dictionary
             //--HashMap<>
     }
