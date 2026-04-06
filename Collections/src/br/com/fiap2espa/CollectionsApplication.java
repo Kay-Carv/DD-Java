@@ -56,9 +56,6 @@ public class CollectionsApplication {
         segundaList.sort(Comparable<Integer>::compareTo);
         System.out.println(segundaList);
 
-
-
-
         //--Interface SET   -- Equivalente a tuple do python
             //--HashSet<>
         Set<String> terceiraLista = new HashSet<>();
@@ -86,6 +83,19 @@ public class CollectionsApplication {
         System.out.println(quartaLista.size());
         System.out.println(quartaLista);
 
+        List<Livro> livros = new ArrayList<>();
+        livros.add(new Livro("A arte da Guerra", "Estratégia"));
+        livros.add(new Livro("Neuromancer", "Ficção"));
+        livros.add(new Livro("O estranho Misterioso", "Suspense"));
+        livros.add(new Livro("Capitães de Areia", "Romance"));
+        livros.add(new Livro("Spy X Family", "Comedia"));
+
+        for (Livro temp: livros) {
+            System.out.println(temp);
+        }
+
+        livros.sort(Comparator.comparing(Livro::getTitulo));
+        System.out.println(livros);
 
         //--Map<>             -- Equivalente a Dictionary
             //--HashMap<>
