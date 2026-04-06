@@ -99,5 +99,18 @@ public class CollectionsApplication {
 
         //--Map<>             -- Equivalente a Dictionary
             //--HashMap<>
+        Map<String, List<Livro>> emprestimos = new HashMap<>();
+        Livro livro00 = new Livro("A arte da Guerra", "Estratégia");
+        Livro livro01 = new Livro("O estranho Misterioso", "Suspense");
+        Livro livro02 = new Livro("Capitães de Areia", "Romance");
+        Livro livro03 = new Livro("Spy X Family", "Comedia");
+        Livro livro04 = new Livro("Neuromancer", "Ficção");
+
+        emprestimos.put("Carlos", List.of(livro01));
+//        emprestimos.put("Joao", livro04);
+//        emprestimos.put("Vitor", livro03);
+        emprestimos.put("Carlos", List.of(livro00));
+
+        System.out.println("\n" + emprestimos);
     }
 }
